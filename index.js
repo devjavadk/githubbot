@@ -271,7 +271,7 @@ client.on('group-participants-update', async (anu) => {
 					break
 				case 'blacklist': 
 					teks = '𝗕𝗟A𝗖𝗞 𝗟𝗜𝗦𝗧 :\n'
-					para (deixe o bloqueio do bloqueado) {
+					for (let block of blocked) {
 						teks += `┣➢ @${block.split('@')[0]}\n`
 					}
 					teks += `𝗧𝗼𝘁𝗮𝗹 : ${blocked.length}`
