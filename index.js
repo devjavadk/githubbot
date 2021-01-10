@@ -785,7 +785,7 @@ client.on('group-participants-update', async (anu) => {
 					if (!isGroup) return reply(mess.only.group)
 					teks = `Lista dos adm do gp mn *${groupMetadata.subject}*\n𝗧𝗼𝘁𝗮𝗹 : ${groupAdmins.length}\n\n`
 					no = 0
-					para (deixe o administrador dos administradores do grupo) {
+					for (let admon of groupAdmins) {
 						no += 1
 						teks += `[${no.toString()}] @${admon.split('@')[0]}\n`
 					}
