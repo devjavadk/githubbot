@@ -1,7 +1,7 @@
 
 const help = (prefix) => { 
 	return `                 
-┏━━❉ *Sobre o bot* ❉━━━┓
+┏━━❉ *Sobre* ❉━━━┓
 ┣⊱ *${prefix}owner*
 ┣⊱ *${prefix}ping*
 ┣⊱ *${prefix}donasi*
@@ -14,6 +14,20 @@ const help = (prefix) => {
 ┣⊱ *${prefix}text3d*
 ┣⊱ *${prefix}ocr*
 ┣⊱ *${prefix}toimg*
+┣⊱ *${prefix}marvelogo*
+┣⊱ *${prefix}lovemake*
+┣⊱ *${prefix}ninjalogo*
+┣⊱ *${prefix}glitch*
+┣⊱ *${prefix}party*
+┣⊱ *${prefix}rtext*
+┣⊱ *${prefix}firetext*
+┣⊱ *${prefix}textdark*
+┣⊱ *${prefix}textblue*
+┣⊱ *${prefix}textsky*
+┣⊱ *${prefix}texteng*
+┣⊱ *${prefix}wolflogo*
+┣⊱ *${prefix}lionlogo*
+┣⊱ *${prefix}galaxtext*
 ┣━━❉ *Media* ❉━━━━━━
 ┣⊱ *${prefix}ytmp4*
 ┣⊱ *${prefix}fototiktok*
@@ -73,6 +87,7 @@ const help = (prefix) => {
 ┣⊱ *${prefix}simih* [1/0]
 ┣⊱ *${prefix}nsfw* [1/0]
 ┣⊱ *${prefix}bem-vindo* [1/0]
+┣⊱ *${prefix}groupinfo*
 ┣━━❉ *Proprietário* ❉━━━━━━
 ┣⊱ *${prefix}bc*
 ┣⊱ *${prefix}colocarprefixo*
@@ -83,7 +98,8 @@ const help = (prefix) => {
 ┣⊱ *${prefix}sair*
 ┣⊱ *${prefix}clonar*
 ┣━━━━━━━━━━━━━━━━
-┣*𝐋𝐈𝐆𝐇𝐓𝐁𝐎𝐓* *2021*
+┣*𝐋𝐈𝐆𝐇𝐓𝐁𝐎𝐓* *2021* *IN*
+𝐃𝐄𝐕 𝐉𝐀𝐕𝐀 𝐔𝐏𝐋𝐎𝐀𝐃𝐒 𝐀𝐍𝐃 𝐃𝐉𝐒 𝐏𝐑𝐎𝐃𝐔𝐂𝐓𝐈𝐎𝐍𝐒
 ┗━━━━━━━━━━━━━━━━
 
 `
