@@ -317,7 +317,7 @@ client.on('group-participants-update', async (anu) => {
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
                 case 'verdade':
-					const trut =['Você já gostou de alguém? Quão mais?','Se você pode ou se quiser, em gc / fora da gc, com quem você fará amizade?','Qual é o seu maior medo?','Você já gostou de alguém e sentiu essa pessoa como você também?','Qual é o nome da ex-namorada do seu amigo de que você gostava secretamente?','Você já roubou o dinheiro de sua mãe ou de seu pai? O motivo?','o que te faz feliz quando você está triste','amor nunca correspondido? se alguma vez com quem? como se sente, brou?','já teve um caso com alguém?','a coisa mais temida','quem é a pessoa mais influente em sua vida','hal membanggakan apa yang kamu dapatkan di tahun ini','siapa orang yang bisa membuatmu sange','siapa orang yang pernah buatmu sange','(bgi yg muslim) pernah ga solat seharian?','Siapa yang paling mendekati tipe pasangan idealmu di sini','suka mabar(main bareng)sama siapa?','pernah nolak orang? alasannya kenapa?','Sebutkan kejadian yang bikin kamu sakit hati yang masih di inget','pencapaian yang udah didapet apa aja ditahun ini?','kebiasaan terburuk lo pas di sekolah apa?']
+					const trut =['Você já gostou de alguém? Quão mais?','Se você pode ou se quiser, em gc / fora da gc, com quem você fará amizade?','Qual é o seu maior medo?','Você já gostou de alguém e sentiu essa pessoa como você também?','Qual é o nome da ex-namorada do seu amigo de que você gostava secretamente?','Você já roubou o dinheiro de sua mãe ou de seu pai? O motivo?','o que te faz feliz quando você está triste','amor nunca correspondido? se alguma vez com quem? como se sente, brou?','já teve um caso com alguém?','a coisa mais temida','quem é a pessoa mais influente em sua vida','Verdade que você ainda não é inscrito no canal do Dev Java?😡','qual pais queria morar','Qual país moraria sem ser o seu país nativo?','free fire ou fortinite?','Veradade que nao gosta de tiko teko?','Verdade que acha a belle delphine uma gostosa?','Verdade que sua idade é 15?','Verdade que você ja pegou mais de 5 em uma noite?','verdade que você é gay?','Verdade que você gosta de mulher?']
 					const ttrth = trut[Math.floor(Math.random() * trut.length)]
 					truteh = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
 					client.sendMessage(from, truteh, image, { caption: '*Truth*\n\n'+ ttrth, quoted: mek })
@@ -885,6 +885,40 @@ client.on('group-participants-update', async (anu) => {
 						reply(' *ENVIAR FOTOS COM CAPTIO OCR* ')
 					}
 					break
+				case 'groupinfo':
+                client.updatePresence(from, Presence.composing)
+                if (!isGroup) return reply(mess.only.group)
+                ppUrl = await client.getProfilePicture(from) // leave empty to get your own
+			    buffer = await getBuffer(ppUrl)
+		        client.sendMessage(from, buffer, image, {quoted: mek, caption: `*NAME* : ${groupName}\n*MEMBER* : ${groupMembers.length}\n*ADMIN* : ${groupAdmins.length}\n*DESK* : ${groupDesc}`})
+                break
+				case 'galaxtext':
+					if (args.length < 1) return reply('mau apa om')
+					teks = body.slice(12)
+					if (teks.length > 8) return reply('Teksnya kepanjangan, maksimal 8 karakter')
+					reply(mess.wait)
+					buffer = await getBuffer(`https://api.vhtear.com/galaxytext?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+					case 'marvelogo':
+					var gh = body.slice(9)
+					var gbl5 = gh.split("|")[0];
+					var gbl6 = gh.split("|")[1];
+					if (args.length < 1) return reply('Teksnya mana um')
+					reply(mess.wait)
+					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/marvellogo?text1=${gbl5}&text2=${gbl6}&apikey=xptnbot352`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+				case 'lovemake':
+					if (args.length < 1) return reply('Teksnya mana um')
+					love = body.slice(10)
+					if (love.length > 12) return reply('Teksnya kepanjangan, maksimal 9 karakter')
+					reply(mess.wait)
+					buffer = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${love}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: ' '+love})
+					break
+
 				default:
 			if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
